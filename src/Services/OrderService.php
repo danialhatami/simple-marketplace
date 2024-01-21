@@ -15,7 +15,7 @@ class OrderService
         $totalPrice = 0;
         $order = Order::create(['user_id' => $user->id]);
         foreach ($products as $productData) {
-            $product = Product::find($productData['id']);
+            $product = Product::findOrFail($productData['id']);
             $deliveryPrice = $productData['delivery'] ? $product->delivery_price : 0;
             $price = $product->price + $deliveryPrice;
 
