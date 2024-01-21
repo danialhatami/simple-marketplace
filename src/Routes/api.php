@@ -16,8 +16,8 @@ Route::middleware('bindings')->prefix('api/v1')->name('api.v1.')->group(function
         Route::middleware('auth:sanctum')->group(function () {
             Route::get('profile', [AuthController::class, 'userProfile'])->name('user_profile.get');
             Route::get('orders', [MarketplaceUserController::class, 'userOrders'])->name('user_orders.get');
+            Route::get('products', [MarketplaceUserController::class, 'userProducts'])->name('user_products.get');
         });
-        Route::get('products', [MarketplaceUserController::class, 'userProducts'])->name('user_products.get');
     });
 
     Route::prefix('product')->name('product.')->group(function () {
