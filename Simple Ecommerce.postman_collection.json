@@ -110,7 +110,67 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/user/profile",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2024 19:52:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"user1@local.dev\"\n}"
+						}
+					]
 				},
 				{
 					"name": "User Orders",
@@ -145,7 +205,67 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "User Orders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/user/orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"orders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2024 20:36:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"total_price\": null,\n            \"tracking_code\": \"TRC-20241\",\n            \"details\": []\n        },\n        {\n            \"id\": 2,\n            \"total_price\": null,\n            \"tracking_code\": \"TRC-20242\",\n            \"details\": []\n        },\n        {\n            \"id\": 3,\n            \"total_price\": null,\n            \"tracking_code\": \"TRC-20243\",\n            \"details\": []\n        },\n        {\n            \"id\": 4,\n            \"total_price\": null,\n            \"tracking_code\": \"TRC-20244\",\n            \"details\": []\n        },\n        {\n            \"id\": 5,\n            \"total_price\": null,\n            \"tracking_code\": \"TRC-20245\",\n            \"details\": []\n        },\n        {\n            \"id\": 6,\n            \"total_price\": null,\n            \"tracking_code\": \"TRC-20246\",\n            \"details\": []\n        },\n        {\n            \"id\": 7,\n            \"total_price\": 50500,\n            \"tracking_code\": \"TRC-20247\",\n            \"details\": [\n                {\n                    \"id\": 1,\n                    \"product_id\": 1,\n                    \"product_price\": 10000,\n                    \"quantity\": 1,\n                    \"product_delivery_price\": 100\n                }\n            ]\n        },\n        {\n            \"id\": 8,\n            \"total_price\": 50500,\n            \"tracking_code\": \"TRC-20248\",\n            \"details\": [\n                {\n                    \"id\": 2,\n                    \"product_id\": 1,\n                    \"product_price\": 10000,\n                    \"quantity\": 1,\n                    \"product_delivery_price\": 100\n                }\n            ]\n        },\n        {\n            \"id\": 9,\n            \"total_price\": 50500,\n            \"tracking_code\": \"TRC-20249\",\n            \"details\": [\n                {\n                    \"id\": 3,\n                    \"product_id\": 1,\n                    \"product_price\": 10000,\n                    \"quantity\": 1,\n                    \"product_delivery_price\": 100\n                }\n            ]\n        },\n        {\n            \"id\": 10,\n            \"total_price\": 50100,\n            \"tracking_code\": \"TRC-202410\",\n            \"details\": [\n                {\n                    \"id\": 4,\n                    \"product_id\": 1,\n                    \"product_price\": 10000,\n                    \"quantity\": 1,\n                    \"product_delivery_price\": 100\n                }\n            ]\n        },\n        {\n            \"id\": 11,\n            \"total_price\": 50100,\n            \"tracking_code\": \"TRC-202411\",\n            \"details\": [\n                {\n                    \"id\": 5,\n                    \"product_id\": 1,\n                    \"product_price\": 10000,\n                    \"quantity\": 1,\n                    \"product_delivery_price\": 100\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
 				},
 				{
 					"name": "User Products",
@@ -180,7 +300,67 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "User Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/user/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2024 20:18:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Product Title\",\n            \"delivery_price\": 100,\n            \"price\": 10000,\n            \"images\": [\n                {\n                    \"image_url\": \"http://127.0.0.1:8000/storage/product_images/PRV7H86oiubr1cgD7Dx7pjtEI55uezvoVFNfMupr.png\"\n                },\n                {\n                    \"image_url\": \"http://127.0.0.1:8000/storage/product_images/e2g6hib4qGnuEHGvuC3SJKJykLCY8pF8w7JTvBZ8.png\"\n                },\n                {\n                    \"image_url\": \"http://127.0.0.1:8000/storage/product_images/ZjI8SfzOtr0VWG0yJNVuyLQPjhQoQLBcRqcLvtGj.png\"\n                }\n            ]\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/v1/user/products?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/v1/user/products?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/v1/user/products?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/v1/user/products\",\n        \"per_page\": 15,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
 				}
 			]
 		},
@@ -249,7 +429,96 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Product Title",
+											"description": "Required",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "10000",
+											"description": "Required",
+											"type": "text"
+										},
+										{
+											"key": "delivery_price",
+											"value": "100",
+											"description": "Required",
+											"type": "text"
+										},
+										{
+											"key": "images[]",
+											"description": "Required",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/product/create",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2024 19:53:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product Created Successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"Product Title\",\n        \"delivery_price\": 100,\n        \"price\": 10000,\n        \"images\": [\n            {\n                \"image_url\": \"http://127.0.0.1:8000/storage/product_images/PRV7H86oiubr1cgD7Dx7pjtEI55uezvoVFNfMupr.png\"\n            },\n            {\n                \"image_url\": \"http://127.0.0.1:8000/storage/product_images/e2g6hib4qGnuEHGvuC3SJKJykLCY8pF8w7JTvBZ8.png\"\n            },\n            {\n                \"image_url\": \"http://127.0.0.1:8000/storage/product_images/ZjI8SfzOtr0VWG0yJNVuyLQPjhQoQLBcRqcLvtGj.png\"\n            }\n        ]\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Product List",
@@ -306,7 +575,96 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Product List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/product?query=&max_price=100000&sort_by_price=asc&user_id=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"product"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": ""
+										},
+										{
+											"key": "max_price",
+											"value": "100000",
+											"description": "Sometimes Rule"
+										},
+										{
+											"key": "sort_by_price",
+											"value": "asc",
+											"description": "asc or desc"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"description": "Must Exists"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2024 20:46:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Product Title\",\n            \"delivery_price\": 100,\n            \"price\": 10000,\n            \"images\": [\n                {\n                    \"image_url\": \"http://127.0.0.1:8000/storage/product_images/PRV7H86oiubr1cgD7Dx7pjtEI55uezvoVFNfMupr.png\"\n                },\n                {\n                    \"image_url\": \"http://127.0.0.1:8000/storage/product_images/e2g6hib4qGnuEHGvuC3SJKJykLCY8pF8w7JTvBZ8.png\"\n                },\n                {\n                    \"image_url\": \"http://127.0.0.1:8000/storage/product_images/ZjI8SfzOtr0VWG0yJNVuyLQPjhQoQLBcRqcLvtGj.png\"\n                }\n            ]\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://127.0.0.1:8000/api/v1/product?page=1\",\n        \"last\": \"http://127.0.0.1:8000/api/v1/product?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://127.0.0.1:8000/api/v1/product?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://127.0.0.1:8000/api/v1/product\",\n        \"per_page\": 15,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Single Product",
@@ -378,7 +736,67 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Delete Product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/product/{{id}}",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"product",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2024 20:26:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product Deleted Successfully\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -426,7 +844,75 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Create Order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"products\" : [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 5,\r\n            \"delivery\": true\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/order",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"order"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.2.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 21 Jan 2024 20:35:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 11,\n        \"total_price\": 50100,\n        \"tracking_code\": \"TRC-202411\",\n        \"details\": [\n            {\n                \"id\": 5,\n                \"product_id\": 1,\n                \"product_price\": 10000,\n                \"quantity\": 1,\n                \"product_delivery_price\": 100\n            }\n        ]\n    }\n}"
+						}
+					]
 				},
 				{
 					"name": "Orders List",
