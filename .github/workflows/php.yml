@@ -26,9 +26,6 @@ jobs:
         composer create-project --prefer-dist laravel/laravel laravel
         cd laravel
         composer config repositories.self path ../
-
-    - name: Install Simple Marketplace Package
-      run: |
         composer require danialhatami/simple-marketplace:dev-master --prefer-source --no-update
         composer update
 
