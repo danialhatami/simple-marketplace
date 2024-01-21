@@ -1,0 +1,35 @@
+name: Run Laravel Package Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup PHP, with Composer and extensions
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        extensions: mbstring, dom, fileinfo, mysql
+        tools: composer:v2
+
+    - name: Install Laravel
+      run: |
+        composer create-project --prefer-dist laravel/laravel laravel
+        cd laravel
+        composer config repositories.self path ../
+        composer require danialhatami/simple-marketplace:dev-master --prefer-source --no-update
+        composer update
+
+    - name: Run Tests
+      run: |
+        cd laravel
+        php artisan test
