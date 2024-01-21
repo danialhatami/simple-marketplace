@@ -40,8 +40,7 @@ class AuthController extends Controller
 
     public function login(UserLoginRequest $request): JsonResponse
     {
-        $validated = $request->validated();
-        $credentials = request([$validated['email'], $validated['password']]);
+        $credentials = $request->only('email', 'password');
 
         if (!Auth::attempt($credentials)) {
             abort(Response::HTTP_UNAUTHORIZED, 'Unauthorized');
