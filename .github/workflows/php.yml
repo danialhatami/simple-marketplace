@@ -1,4 +1,4 @@
-name: Laravel Package CI
+name: Run Laravel Package Tests
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  test-package-installation-and-run-tests:
+  run-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,21 +21,14 @@ jobs:
         extensions: mbstring, dom, fileinfo, mysql
         tools: composer:v2
 
-    - name: Install Laravel
+    - name: Install Laravel and Marketplace Packages
       run: |
         composer create-project --prefer-dist laravel/laravel laravel
         cd laravel
         composer config repositories.self path ../
         composer require danialhatami/simple-marketplace:dev-master --prefer-source --no-update
         composer update
-
-    - name: Run Tests Inside Laravel Project
+    - name: Run Tests
       run: |
         cd laravel
         php artisan test
-
-    - name: Install Package Dependencies
-      run: composer install
-
-    - name: Run Package Tests
-      run: vendor/bin/phpunit
