@@ -1,5 +1,5 @@
 {
-    "name": "danial/simple-marketplace",
+    "name": "danialhatami/simple-marketplace",
     "description": "A simple E-Commerce Package for Laravel.",
     "type": "library",
     "require": {
