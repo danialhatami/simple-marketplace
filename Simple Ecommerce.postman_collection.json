@@ -922,7 +922,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "7|zCjqy5eTwnnniyrVbjWBrpX78QSBOualflNDDLeEd2c9299c",
+									"value": "{{token}}",
 									"type": "string"
 								}
 							]
