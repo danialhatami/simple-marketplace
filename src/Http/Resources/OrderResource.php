@@ -16,6 +16,7 @@ class OrderResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'total_price' => $this->totalPrice,
             'tracking_code' => 'TRC-' . now()->year . $this->id,
             'details' => OrderDetailsResource::collection($this->orderDetails),
         ];

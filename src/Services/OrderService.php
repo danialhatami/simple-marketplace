@@ -17,8 +17,6 @@ class OrderService
         foreach ($products as $productData) {
             $product = Product::findOrFail($productData['id']);
             $deliveryPrice = $productData['delivery'] ? $product->delivery_price : 0;
-            $price = $product->price + $deliveryPrice;
-
             $order->orderDetails()->create([
                 'product_id' => $product->id,
                 'product_price' => $product->price,
@@ -26,7 +24,8 @@ class OrderService
                 'quantity' => $productData['quantity']
             ]);
 
-            $totalPrice += $price * $productData['quantity'];
+            $totalPrice += $product->price * $productData['quantity'];
+            $totalPrice += $deliveryPrice;
         }
         $order->update(['total_price' => $totalPrice]);
 
