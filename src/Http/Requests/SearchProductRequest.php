@@ -12,7 +12,8 @@ class SearchProductRequest extends FormRequest
         return [
             'query' => 'nullable|string',
             'max_price' => 'sometimes|numeric',
-            'sort_by_price' => 'sometimes|in:asc,desc'
+            'sort_by_price' => 'sometimes|in:asc,desc',
+            'user_id' => 'nullable|exists:users,id'
         ];
     }
 }
