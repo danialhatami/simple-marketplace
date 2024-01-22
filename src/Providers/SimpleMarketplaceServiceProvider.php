@@ -3,8 +3,10 @@
 namespace Danial\SimpleMarketplace\Providers;
 
 use Danial\SimpleMarketplace\Console\Commands\InstallCommand;
+use Danial\SimpleMarketplace\Events\OrderCreated;
 use Danial\SimpleMarketplace\Exceptions\CustomExceptionHandler;
 use Danial\SimpleMarketplace\Http\Middlewares\MustBeLoggedIn;
+use Danial\SimpleMarketplace\Listeners\SendOrderNotification;
 use Danial\SimpleMarketplace\Models\Order;
 use Danial\SimpleMarketplace\Models\Product;
 use Danial\SimpleMarketplace\Policies\OrderPolicy;
@@ -36,6 +38,11 @@ class SimpleMarketplaceServiceProvider extends ServiceProvider
                 InstallCommand::class,
             ]);
         }
+
+        \Illuminate\Support\Facades\Event::listen(
+            OrderCreated::class,
+            SendOrderNotification::class
+        );
 
         AboutCommand::add('Simple Marketplace', fn () => [
             'Version' => '0.0.1',
