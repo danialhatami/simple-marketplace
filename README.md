@@ -1,6 +1,7 @@
 <p align="center">
 <img src="https://img.shields.io/badge/Laravel-Package-red" alt="Framework">
 <a href="https://github.com/danialhatami/simple-marketplace/actions/workflows/php.yml"> <img src="https://github.com/danialhatami/simple-marketplace/actions/workflows/php.yml/badge.svg?branch=master" alt="Framework"></a>
+<a href="https://packagist.org/packages/danialhatami/simple-marketplace"> <img src="https://img.shields.io/packagist/dt/danialhatami/simple-marketplace" alt="Downloads"></a>
 </p>
 
 ## Laravel Simple Marketplace Package
