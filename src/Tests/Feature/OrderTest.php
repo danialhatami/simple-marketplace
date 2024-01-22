@@ -6,6 +6,7 @@ use App\Models\User;
 use Danial\SimpleMarketplace\Models\Order;
 use Danial\SimpleMarketplace\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Notification;
 use Laravel\Sanctum\Sanctum;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,12 +14,13 @@ use Tests\TestCase;
 
 class OrderTest extends TestCase
 {
-
     use RefreshDatabase;
 
     public function test_create_order()
     {
         Notification::fake();
+        Event::fake();
+        Event::assertDispatched(OrderCreated::class);
         $user = User::factory()->create();
         $product = Product::factory()->create();
         Sanctum::actingAs($user);
