@@ -35,15 +35,19 @@ Ready for a smooth takeoff? Just follow these steps:
 - Order Process: Simple ordering, cost calculation, admin email alerts
 - Delivery Options: Doorstep delivery
 
+After installation, you can customize the admin email.
+Navigate to the `config/marketplace.php` file and modify the admin_email value to suit your needs.
+
 ### Essential Files
 Need to jump straight to the heart of the action?  
 Here are quick links to some of the most crucial files in this project:
 - Package Service Provider  [👉 Simple Marketplace Service Provider](https://github.com/danialhatami/simple-marketplace/blob/master/src/Providers/SimpleMarketplaceServiceProvider.php)
 - Feature Tests  [👉 Test Files](https://github.com/danialhatami/simple-marketplace/tree/master/src/Tests/Feature)
-- Installation Command [👉 Insstall Command](https://github.com/danialhatami/simple-marketplace/blob/master/src/Console/Commands/InstallCommand.php)
+- Installation Command [👉 Install Command](https://github.com/danialhatami/simple-marketplace/blob/master/src/Console/Commands/InstallCommand.php)
 - Main Services [👉 Service Files](https://github.com/danialhatami/simple-marketplace/tree/master/src/Services)
 - Route File [👉 Api Route](https://github.com/danialhatami/simple-marketplace/blob/master/src/Routes/api.php)
 - Notification [👉 Notification](https://github.com/danialhatami/simple-marketplace/blob/master/src/Notifications/OrderPlacedNotification.php)
+
 
 <b>Dive Deeper</b>  
 For an enchanting journey through every nook and cranny of this project, kindly open your IDE's magical gates.  
