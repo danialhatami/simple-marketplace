@@ -58,6 +58,7 @@ jobs:
     - name: Run Tests
       run: |
         cd laravel
+        php artisan migrate
         php artisan simple-marketplace:install
         php artisan migrate
         php artisan test
