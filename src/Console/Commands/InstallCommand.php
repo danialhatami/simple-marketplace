@@ -26,7 +26,6 @@ class InstallCommand extends Command
 
     public function handle(): void
     {
-
         if (!Schema::hasTable('users')) {
             $this->error('User table not found. Please run the Laravel default migrations first.');
             return;
@@ -46,7 +45,11 @@ class InstallCommand extends Command
             File::copy($file->getPathname(), $migrationsPath . $migrationName);
         }
 
-        $this->info('Migrations published');
+        $this->info('Migrations Published');
+
+        File::copy(__DIR__ . '/../../config/marketplace.php', config_path('marketplace.php'));
+
+        $this->info('Config File Published');
 
         $this->info('Simple Marketplace package installed successfully');
     }
