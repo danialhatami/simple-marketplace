@@ -28,8 +28,7 @@ class OrderService
             $totalPrice += $deliveryPrice;
         }
         $order->update(['total_price' => $totalPrice]);
-
-        OrderCreated::dispatch($order);
+        event(new OrderCreated($order));
         return $order;
     }
 
