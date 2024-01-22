@@ -39,7 +39,7 @@ class ProductService
                 return $product;
             });
         } catch (\Throwable $e) {
-            throw new DatabaseException('There was an error in creating the article.');
+            throw new DatabaseException('There was an error in creating.');
         }
         Cache::forget('products_search_*');
     }
