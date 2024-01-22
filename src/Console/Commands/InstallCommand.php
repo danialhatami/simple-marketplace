@@ -47,7 +47,9 @@ class InstallCommand extends Command
 
         $this->info('Migrations Published');
 
-        File::copy(__DIR__ . '/../../config/marketplace.php', config_path('marketplace.php'));
+        $configSourcePath = realpath(__DIR__ . '/../../config/marketplace.php');
+        $configDestinationPath = config_path('marketplace.php');
+        File::copy($configSourcePath, $configDestinationPath);
 
         $this->info('Config File Published');
 
