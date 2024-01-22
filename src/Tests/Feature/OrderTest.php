@@ -3,6 +3,7 @@
 namespace Danial\SimpleMarketplace\Tests\Feature;
 
 use App\Models\User;
+use Danial\SimpleMarketplace\Events\OrderCreated;
 use Danial\SimpleMarketplace\Models\Order;
 use Danial\SimpleMarketplace\Models\Product;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -20,7 +21,6 @@ class OrderTest extends TestCase
     {
         Notification::fake();
         Event::fake();
-        Event::assertDispatched(OrderCreated::class);
         $user = User::factory()->create();
         $product = Product::factory()->create();
         Sanctum::actingAs($user);
@@ -36,6 +36,7 @@ class OrderTest extends TestCase
         ];
 
         $response = $this->postJson(route('api.v1.order.create.post'), $requestData);
+        Event::assertDispatched(OrderCreated::class);
 
         $response->assertStatus(Response::HTTP_CREATED)->assertJsonStructure([
             'data' => ['id', 'tracking_code', 'details']
